@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ishika Investigation Portal</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Segoe UI,sans-serif;background:#111;color:white;overflow-x:hidden}
+.page{min-height:100vh;display:none;justify-content:center;align-items:center;padding:24px;text-align:center;position:relative;transition:opacity .5s ease}
+.active{display:flex}
+.card{max-width:700px;width:100%;background:rgba(0,0,0,.55);padding:28px;border-radius:24px}
+button{padding:14px 26px;border:none;border-radius:999px;cursor:pointer;font-size:1rem;margin-top:12px}
+.message{max-height:75vh;overflow-y:auto}
+.fall{position:fixed;top:-30px;animation:drop linear infinite;pointer-events:none}
+@keyframes drop{to{transform:translateY(110vh)}}
+</style>
+</head>
+<body>
+
+<div class="page active" id="p1"><div class="card">
+<h1>🚨 Ishika Investigation Committee 🚨</h1>
+<p>Before passing final judgment...</p>
+<p>The accused respectfully requests that you answer a few questions 😭</p>
+<button onclick="nextPage('p2')">Proceed ⚖️</button>
+</div></div>
+
+<div class="page" id="p2"><div class="card">
+<h2>Question 1 🤔</h2>
+<p>Who overthinks more?</p>
+<button onclick="nextPage('p3')">Ishika</button><br>
+<button onclick="nextPage('p3')">Ishika after seeing one suspicious-looking notification 😭</button>
+</div></div>
+
+<div class="page" id="p3"><div class="card">
+<h2>Question 2 😭</h2>
+<p>How many secret girlfriends were discovered during the investigation?</p>
+<button onclick="nextPage('p4')">0</button><br>
+<button onclick="nextPage('p4')">Still 0 😭</button>
+</div></div>
+
+<div class="page" id="p4"><div class="card">
+<h2>Question 3 ⚖️</h2>
+<p>Should a man be convicted without evidence?</p>
+<button onclick="nextPage('p44')">No</button><br>
+<button onclick="nextPage('p44')">OBJECTION YOUR HONOUR 😭</button>
+</div></div>
+
+<div class="page" id="p44"><div class="card">
+<h2>Bonus Question 😭</h2>
+<p>Who is always right?</p>
+<button onclick="nextPage('p45')">Ishika</button><br>
+<button onclick="nextPage('p45')">Ishika (I was forced to add this option)</button>
+</div></div>
+
+<div class="page" id="p45"><div class="card">
+<h2>Okay okay... 😭</h2>
+<p>Enough questions.</p>
+<p>Now the actual reason I made this website...</p>
+<button onclick="nextPage('p5')">Continue ❤️</button>
+</div></div>
+
+<div class="page" id="p5"><div class="card message">
+<h1>❤️ Dear Ishika ❤️</h1>
+<p>
+I know this whole situation has been bothering you, and honestly I understand why.<br><br>
+If I were in your position, I'd probably have questions too.<br><br>
+What hurts isn't that you're asking questions.<br><br>
+What hurts is knowing that I can't seem to prove something that never happened.<br><br>
+There wasn't another girl.<br>
+There wasn't some secret story happening while you were away.<br>
+And there wasn't anything I was hiding from you.<br><br>
+Nothing happened.<br><br>
+I'm not asking you to blindly believe this page.<br><br>
+I'm asking you to remember the person saying it.<br><br>
+I never cheated on you.<br><br>
+And if you're still upset, that's okay.<br><br>
+I just hope that eventually you'll believe me when I say there was never anyone else. ❤️
+</p>
+<button onclick="nextPage('p6')">Final Verdict →</button>
+</div></div>
+
+<div class="page" id="p6"><div class="card">
+<h1>⚖️</h1>
+<h2>Congratulations 😭</h2>
+<p>
+You have successfully completed The Ishika Investigation Portal.<br><br>
+Final Verdict: NOT GUILTY ✅<br><br>
+Sentence: One hug ❤️<br><br>
+And no more FBI investigations for the next 24 hours 😭<br><br>
+P.S. If I wanted anyone else, I wouldn't be putting this much effort into convincing you that I only want you. ❤️
+</p>
+</div></div>
+
+<script>
+function nextPage(id){
+const current=document.querySelector('.active');
+current.style.opacity='0';
+setTimeout(()=>{
+current.classList.remove('active');
+const next=document.getElementById(id);
+next.classList.add('active');
+next.style.opacity='0';
+setTimeout(()=>{next.style.opacity='1';},50);
+},1000);
+}
+for(let i=0;i<35;i++){
+let e=document.createElement('div');
+e.className='fall';
+e.innerHTML=Math.random()>.5?'❤️':'⚖️';
+e.style.left=Math.random()*100+'vw';
+e.style.fontSize=(18+Math.random()*18)+'px';
+e.style.animationDuration=(5+Math.random()*8)+'s';
+document.body.appendChild(e);
+}
+</script>
+</body></html>
