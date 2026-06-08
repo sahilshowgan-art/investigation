@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title><h1>❤️ Ishika, Before You Leave... ❤️</h1></title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Segoe UI,sans-serif;background:#111;color:white;overflow-x:hidden}
+.page{min-height:100vh;display:none;justify-content:center;align-items:center;padding:24px;text-align:center;position:relative;transition:opacity .5s ease}
+.active{display:flex}
+.card{max-width:700px;width:100%;background:rgba(0,0,0,.55);padding:28px;border-radius:24px}
+button{padding:14px 26px;border:none;border-radius:999px;cursor:pointer;font-size:1rem;margin-top:12px}
+.message{max-height:75vh;overflow-y:auto}
+.fall{position:fixed;top:-30px;animation:drop linear infinite;pointer-events:none}
+@keyframes drop{to{transform:translateY(110vh)}}
+</style>
+</head>
+<body>
+
+<div class="page active" id="p1"><div class="card">
+<h1>❤️ Ishika, Before You Leave... ❤️</h1>
+<p>I know you're upset with me.</p>
+<p>I know I deserve that.</p>
+<p>But before you make your final decision...</p>
+<p>Can you answer a few questions for me? 😭</p>
+<button onclick="nextPage('p2')">Okay 😭</button>
+</div></div>
+
+<div class="page" id="p2"><div class="card">
+<h2>Question 1 🥲</h2>
+<p>Who is better at overthinking?</p>
+<button onclick="nextPage('p3')">Ishika</button><br>
+<button onclick="nextPage('p3')">Ishika after reading "hmm"</button>
+</div></div>
+
+<div class="page" id="p3"><div class="card">
+<h2>Question 2 😭</h2>
+<p>Who is better at making mistakes?</p>
+<button onclick="nextPage('p4')">Me</button><br>
+<button onclick="nextPage('p4')">Definitely Me</button>
+</div></div>
+
+<div class="page" id="p4"><div class="card">
+<h2>Question 3 ⚖️</h2>
+<p>Who deserves more effort?</p>
+<button onclick="nextPage('p44')">Ishika</button><br>
+<button onclick="nextPage('p44')">Still Ishika</button>
+</div></div>
+
+<div class="page" id="p44"><div class="card">
+<h2>Final Question 🥺</h2>
+<p>Will you at least hear me out?</p>
+<button onclick="nextPage('p45')">Yes</button><br>
+<button onclick="nextPage('p45')">Fine... speak 😭</button>
+</div></div>
+
+<div class="page" id="p45"><div class="card">
+<h2>Okay okay... 😭</h2>
+<p>No more questions.</p>
+<p>Now let me say what I should've said a long time ago.</p>
+<button onclick="nextPage('p5')">Continue ❤️</button>
+</div></div>
+
+<div class="page" id="p5"><div class="card message">
+<h1>❤️ Dear Ishika ❤️</h1>
+<p>
+I know you're hurt.<br><br>
+And honestly, I understand why.<br><br>
+For the last few months, I wasn't the boyfriend you deserved.<br><br>
+I stopped putting in the effort that I should have been putting in.<br><br>
+I made you feel ignored.<br>
+I made you feel unloved.<br><br>
+And the worst part is that I didn't realise how much it was hurting you until it was already too late.<br><br>
+You were asking for effort when you shouldn't have had to ask for it.<br><br>
+You were asking for attention when it should have come naturally.<br><br>
+And for that, I'm genuinely sorry.<br><br>
+Not sorry because you're upset.<br><br>
+Sorry because I know I failed you.<br><br>
+I also know that when you wanted me beside you, especially during important moments, I wasn't always there.<br><br>
+I know how much you wanted me to come with you.<br><br>
+And I know my absence hurt you.<br><br>
+The truth is that I wasn't choosing someone else over you.<br><br>
+I wasn't avoiding you.<br>
+I wasn't trying to make you feel alone.<br><br>
+I was scared that if things went wrong, I might lose the ability to see you at all.<br><br>
+Maybe I handled that badly.<br>
+Maybe I made the wrong decision.<br><br>
+But it was never because you weren't important to me.<br><br>
+You were.<br>
+You still are.<br><br>
+I know I can't erase months of hurt with one website.<br><br>
+I know I can't magically fix everything with one apology.<br><br>
+Trust doesn't come back that easily.<br><br>
+But I need you to know something.<br><br>
+I finally understand what I've been doing wrong.<br><br>
+Not because I'm scared of losing you.<br><br>
+But because seeing how much pain you've been carrying opened my eyes.<br><br>
+I'm not asking you to forget everything.<br><br>
+I'm not asking you to pretend nothing happened.<br><br>
+I'm only asking for a chance to do better than the version of me that hurt you.<br><br>
+Because despite all my mistakes...<br><br>
+I still choose you.<br><br>
+And if you'll let me...<br><br>
+I'll spend every day proving that with actions instead of words. ❤️
+</p><button onclick="nextPage('p6')">One Last Thing ❤️</button>
+</div></div>
+
+<div class="page" id="p6"><div class="card">
+<h1>❤️</h1>
+<h2>Congratulations 😭</h2>
+<p>
+You have successfully completed<br><br>
+"The Listen To My Idiot Boyfriend Portal"<br><br>
+Reward:<br><br>
+❤️ 1 boyfriend apology<br><br>
+❤️ unlimited hugs<br><br>
+❤️ significantly improved effort<br><br>
+Valid for:<br><br>
+The rest of my life.
+</p>
+<p>
+P.S.<br><br>
+I know I should've loved you louder.<br><br>
+I'm sorry it took me this long to realise it. ❤️
+</p>
+</div></div>
+
+<script>
+function nextPage(id){
+const current=document.querySelector('.active');
+current.style.opacity='0';
+setTimeout(()=>{
+current.classList.remove('active');
+const next=document.getElementById(id);
+next.classList.add('active');
+next.style.opacity='0';
+setTimeout(()=>{next.style.opacity='1';},50);
+},1000);
+}
+for(let i=0;i<35;i++){
+let e=document.createElement('div');
+e.className='fall';
+e.innerHTML=Math.random()>.5?'❤️':'😭';
+e.style.left=Math.random()*100+'vw';
+e.style.fontSize=(18+Math.random()*18)+'px';
+e.style.animationDuration=(5+Math.random()*8)+'s';
+document.body.appendChild(e);
+}
+</script>
+</body></html>
